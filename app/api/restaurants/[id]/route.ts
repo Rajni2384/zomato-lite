@@ -1,7 +1,7 @@
 import { neon } from "@neondatabase/serverless";
 import type { NextRequest } from "next/server";
 
-export async function GET(_request: NextRequest, ctx: RouteContext<"/restaurants/[id]">) {
+export async function GET(_request: NextRequest, ctx: RouteContext<"/api/restaurants/[id]">) {
   const sql = neon(process.env.DATABASE_URL!);
   const { id } = await ctx.params;
 
